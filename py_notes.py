@@ -35,4 +35,12 @@ def enuD(input_dict, enable_debug=True):
 		count += 1
 	return tempo_array
 	
+import time
+from datetime import datetime
 
+def display_time(time=None):
+	''' from corey s. prints time '''
+	if time is None:
+		time=datetime.now()
+	print(time.strftime('%B %d, %Y %H:%M:%S'))
+	
