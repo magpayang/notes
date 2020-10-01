@@ -44,3 +44,15 @@ def display_time(time=None):
 		time=datetime.now()
 	print(time.strftime('%B %d, %Y %H:%M:%S'))
 	
+def tell_time_loop(delay=6, message="Our time now is", alt_func=None):
+	''' '''
+	count = 0
+	print_message = ' '+message+' '
+	while True:
+		print(count, print_message, time.asctime())
+		count += 1
+		time.sleep(delay)
+		if alt_func is not None:
+			eval(alt_func)
+			
+	
